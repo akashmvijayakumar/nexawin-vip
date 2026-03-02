@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NEXA WIN VIP Prediction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+  background: linear-gradient(-45deg,#000000,#0f2027,#1a2a3a,#000000);
+  background-size:400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Glass Card */
+.container{
+  margin:60px auto;
+  max-width:450px;
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  background:rgba(0,0,0,0.7);
+  box-shadow:0 0 40px rgba(255,215,0,0.7);
+}
+
+/* Heading */
+h1{
+  color:gold;
+  margin-bottom:15px;
+}
+
+/* Image */
+.vip-image{
+  width:80%;
+  max-width:320px;
+  display:block;
+  margin:0 auto 20px;
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(255,215,0,0.6);
+  transition:0.4s;
+}
+
+.vip-image:hover{
+  transform:scale(1.03);
+}
+
+/* Timer */
+.timer{
+  font-size:22px;
+  margin:15px 0;
+  color:#ff4d4d;
+  font-weight:bold;
+}
+
+/* Join Button */
+.join-btn{
+  background:gold;
+  color:black;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  width:100%;
+  margin-top:20px;
+  animation:pulse 1.5s infinite;
+  transition:0.3s;
+}
+
+.join-btn:hover{
+  background:orange;
+  transform:scale(1.05);
+}
+
+/* Register Button */
+.register-btn{
+  background:transparent;
+  color:gold;
+  padding:15px;
+  border:2px solid gold;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  width:100%;
+  margin-top:15px;
+  transition:0.3s;
+}
+
+.register-btn:hover{
+  background:gold;
+  color:black;
+  transform:scale(1.05);
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,215,0,0.7);}
+  70%{box-shadow:0 0 0 25px rgba(255,215,0,0);}
+  100%{box-shadow:0 0 0 0 rgba(255,215,0,0);}
+}
+
+/* Benefits */
+.benefits{
+  text-align:left;
+  margin-top:20px;
+  font-size:14px;
+  color:#ddd;
+}
+
+/* Floating Gold Particles */
+.particle{
+  position:absolute;
+  width:5px;
+  height:5px;
+  background:gold;
+  border-radius:50%;
+  opacity:0.6;
+  animation: float 8s infinite linear;
+}
+
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);}
+}
+
+</style>
+</head>
+<body>
+
+<script>
+for(let i=0;i<25;i++){
+  let particle=document.createElement("div");
+  particle.className="particle";
+  particle.style.left=Math.random()*100+"%";
+  particle.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(particle);
+}
+</script>
+
+<div class="container">
+  <h1>🔥 NEXA WIN VIP</h1>
+
+  <img src="photo_2026-02-07_14-24-57.jpg" class="vip-image" alt="Trading VIP Image">
+
+  <p>KERALA'S BEST VIP TRADING GROUP</p>
+
+  <div class="timer">
+    OFFER ENDS IN: <span id="countdown"></span>
+  </div>
+
+  <button class="join-btn" onclick="joinTelegram()">JOIN VIP TELEGRAM NOW</button>
+
+  <!-- NEW REGISTER BUTTON -->
+  <button class="register-btn" onclick="registerNow()">REGISTER NOW</button>
+
+  <div class="benefits">
+    ✔ 450+ Successful Members 🔥<br>
+    ✔ Daily High Accuracy Signals 📈<br>
+    ✔ Premium VIP Strategy 💎<br>
+    ✔ Personal Support & Guidance 🤝
+  </div>
+</div>
+
+<script>
+var timeLeft=600;
+var timer=setInterval(function(){
+  var minutes=Math.floor(timeLeft/60);
+  var seconds=timeLeft%60;
+  seconds=seconds<10?"0"+seconds:seconds;
+  document.getElementById("countdown").innerHTML=minutes+":"+seconds;
+  if(timeLeft<=0){
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML="EXPIRED";
+  }
+  timeLeft--;
+},1000);
+
+function joinTelegram(){
+  window.location.href="https://t.me/keralanexavip";
+}
+
+/* Register Button Function */
+function registerNow(){
+  window.location.href="https://nexawin.site/#/register?invitationCode=2214202262219";
+}
+</script>
+
+</body>
+</html>
